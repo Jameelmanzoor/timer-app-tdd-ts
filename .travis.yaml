@@ -9,7 +9,7 @@ scripts:
   - npm run build
 deploy:
   provider: surge
-  skip_cleaning: true
+  skip_cleanup: true
   domain: ttd-timer-app-jameel.surge.sh
   project: ./build/
 on:
