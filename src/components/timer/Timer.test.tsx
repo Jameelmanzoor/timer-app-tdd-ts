@@ -1,9 +1,14 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { shallow, ShallowWrapper } from "enzyme";
 import { Timer } from "./Timer";
 
 describe("Timer Specs", () => {
-  let container: any;
+  let container: ShallowWrapper<
+    Readonly<{}> & Readonly<any>,
+    Readonly<{}>,
+    React.Component<{}, {}, any>
+  >;
+
   beforeEach(() => (container = shallow(<Timer />)));
 
   it("Should render a <div/>", () => {
