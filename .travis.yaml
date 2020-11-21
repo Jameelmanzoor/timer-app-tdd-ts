@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  dependencies: node_modules
+scripts:
+  - npm install
+  - npm test
+  - npm run build
+deploy:
+  provider: surge
+  skip_cleaning: true
+  domain: ttd-timer-app-jameel.surge.sh
+  project: ./build/
+on:
+  branch: master
