@@ -14,11 +14,12 @@ describe("TimerButton Test", () => {
   beforeEach(() => {
     container = shallow(<TimerButton buttonValue={""} buttonAction={mockFn} id={""} />);
   });
-
-  it("Should render a <div />", () => {
+  // eslint-disable-next-line
+  it("It Should render a <div /> from TimerButton", () => {
     expect(container.find("button").length).toBeGreaterThanOrEqual(1);
   });
 
+  // eslint-disable-next-line
   it("It should call mock function when clicked", () => {
     container.simulate("click");
     expect(mockFn).toHaveBeenCalled();
